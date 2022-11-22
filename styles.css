@@ -58,6 +58,7 @@ section {
     width: 100%;
     height: 100vh;
     background-image: url(tree-g035a43aa4_1280.jpg);
+    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -75,6 +76,7 @@ section {
 
 
 /*PROJECTS*/
+
 .project {
     width: 94%;
     display: flex;
@@ -91,9 +93,6 @@ section {
     flex-direction: column;
     margin: 10px auto;
     text-decoration: none;
-    background-color: rgb(154, 199, 239);
-    background: linear-gradient(180deg, rgb(154, 199, 239), #000, rgb(255, 111, 0));
-    border-radius: 10%;
 }
 
 .title {
@@ -104,8 +103,10 @@ section {
     padding: 20px;
 }
 
-
+/*SHOW MORE BUTTON*/
 .showdiv {
+    width: 100%;
+    padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -116,9 +117,29 @@ section {
     background-color: rgb(255, 111, 0);
     padding: 10px;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+#showmore {
+    display: none;
+    width: 94%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-left: 3%;
+}
+
+.arrow {
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
 /*PROJECT IMAGES*/
+.project img {
+    border: 3px solid rgb(255, 111, 0);
+}
+
 .op-img {
     width: 80%;
 }
@@ -131,8 +152,90 @@ section {
     width: 80%;
 }
 
+.chat-img {
+    width: 80%;
+}
+
+.bing-img {
+    width: 70%;
+}
+
 .calc-img {
-    width: 35%;
+    width: 50%;
+}
+
+.lo-img {
+    width: 90%;
+}
+
+.pr-img {
+    width: 80%;
+}
+
+.tr-img {
+    width: 80%;
 }
 
 /*CONTACTS*/
+
+#contact {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+}
+
+#contact a {
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+}
+
+#contact a i,
+#contact a p {
+    color: rgb(255, 111, 0);
+
+}
+
+/*MEDIA-QUERY*/
+@media only screen and (max-width:600px) {
+    #navbar {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+    }
+
+    #navbar a:hover {
+        background: none;
+    }
+
+
+    #welcome-section {
+        width: 100%;
+        background-size: contain;
+        background-image: url(Screenshot_20221122_130631.png);
+        margin: 0;
+    }
+
+    #welcome-section h1 {
+        font-size: 2rem;
+        color: #fff;
+    }
+
+    .project {
+        flex-direction: column;
+    }
+
+    .pr {
+        width: 100%;
+    }
+
+    #contact {
+        font-size: 1.5rem;
+    }
+}
